@@ -54,7 +54,6 @@ with st.container():
             """
         )
     with col2:
-        st.image("https://avatars.githubusercontent.com/u/33904170?v=4")
         st.image("https://res.cloudinary.com/dyd911kmh/image/upload/v1640050215/image27_frqkzv.png")
 
 
