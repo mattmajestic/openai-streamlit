@@ -75,7 +75,7 @@ with st.container():
         )
     with col2:
         image_resp = openai.Image.create(prompt="two dogs playing chess, oil painting", n=4, size="512x512")
-        st.image(image_resp["Data"][0]["url"])
+        st.image(image_resp["data"][0]["url"])
         
 # --- Docs ---
 with st.container():
