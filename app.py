@@ -37,23 +37,21 @@ st.title("#")  # This anchor is needed for the page to start at the top when it 
 
 # --- INTRO ---
 with st.container():
-    col1 = st.columns(1)
-    with col1:
-        st.title("Welcome the OpenAI Streamlit Gallery")
-        st.subheader("Deployed via Github & Google Cloud 💻")
-        st.subheader(
-            """
-            Using pure Python for leveraging OpenAI's product offerings including *Speech Recognition*, *AI Image Generation*, *Autocomplete*, *chatGPT*, *etc*.
-            """
-        )
-        st.write("""""")
-        st.subheader(
-            """
-            This page is made with pure Python :snake: with Streamlit library.
-            """
-        )
+    st.title("Welcome the OpenAI Streamlit Gallery")
+    st.subheader("Deployed via Github & Google Cloud 💻")
+    st.subheader(
+        """
+        Using pure Python for leveraging OpenAI's product offerings including *Speech Recognition*, *AI Image Generation*, *Autocomplete*, *chatGPT*, *etc*.
+        """
+    )
+    st.write("""""")
+    st.subheader(
+        """
+        This page is made with pure Python :snake: with Streamlit library.
+        """
+    )
 
-# --- ABOUT ---
+
 with st.container():
     st.write("---")
     col1, col2 = st.columns(2)
