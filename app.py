@@ -74,7 +74,7 @@ with st.container():
 
     col1, col2 = st.columns(2)
     with col1:
-        st.image("https://youtu.be/0-caqm9hu38")
+        st.image("https://avatars.githubusercontent.com/u/33904170?v=4")
         st.subheader("Demo Video")
         st.write("Check out OpenAI as a company. We go over their funding, products & general thoughts on the company.")
     with col2:
