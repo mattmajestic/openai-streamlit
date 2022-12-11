@@ -67,8 +67,11 @@ with st.container():
         
     with col2:
         image_resp = openai.Image.create(prompt=ai_image_idea, n=4, size='256x256')
-        st.image(image_resp["data"][0]["url"])
-        st.image(image_resp["data"][1]["url"])
+        col1, col2 = st.columns(2)
+        with col1:
+            st.image(image_resp["data"][0]["url"])
+        with col2:
+            st.image(image_resp["data"][1]["url"])
         
 # --- Docs ---
 with st.container():
@@ -78,7 +81,7 @@ with st.container():
 
     col1, col2 = st.columns(2)
     with col1:
-        st.image("https://avatars.githubusercontent.com/u/33904170?v=4")
+        st.image("https://avatars.githubusercontent.com/u/14957082?s=200&v=4")
         st.subheader("Demo Video")
         st.write("Check out OpenAI as a company. We go over their funding, products & general thoughts on the company.")
     with col2:
