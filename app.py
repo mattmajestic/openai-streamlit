@@ -36,20 +36,26 @@ local_css("css/styles.css")
 st.title("#")  # This anchor is needed for the page to start at the top when it is called.
 
 # --- INTRO ---
+
 with st.container():
-    st.title("Welcome the OpenAI Streamlit Gallery")
-    st.subheader("Deployed via Github & Google Cloud 💻")
-    st.subheader(
-        """
-        Using pure Python for leveraging OpenAI's product offerings including *Speech Recognition*, *AI Image Generation*, *Autocomplete*, *chatGPT*, *etc*.
-        """
-    )
-    st.write("""""")
-    st.subheader(
-        """
-        This page is made with pure Python :snake: with Streamlit library.
-        """
-    )
+    col1, col2 = st.columns(2)
+    with col1:
+        st.title("Welcome the OpenAI Streamlit Gallery")
+        st.subheader("Deployed via Github & Google Cloud 💻")
+        st.subheader(
+            """
+            Using pure Python for leveraging OpenAI's product offerings including *Speech Recognition*, *AI Image Generation*, *Autocomplete*, *chatGPT*, *etc*.
+            """
+        )
+        st.write("""""")
+        st.subheader(
+            """
+            This page is made with pure Python :snake: with Streamlit library.
+            """
+        )
+    with col2:
+        st.image("https://avatars.githubusercontent.com/u/33904170?v=4")
+        st.image("https://res.cloudinary.com/dyd911kmh/image/upload/v1640050215/image27_frqkzv.png")
 
 
 with st.container():
@@ -61,7 +67,7 @@ with st.container():
         st.button("Generate Art",key="generate")
         
     with col2:
-        image_resp = openai.Image.create(prompt=ai_image_idea, n=4, size="300x300")
+        image_resp = openai.Image.create(prompt=ai_image_idea, n=4, size='256x256')
         st.image(image_resp["data"][0]["url"])
         st.image(image_resp["data"][1]["url"])
         
