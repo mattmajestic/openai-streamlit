@@ -4,10 +4,13 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 from bokeh.models.widgets import Div
 import openai
+import os
+
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 
 st.set_page_config(
-    page_title="Matt Majestic's Portfolio Page",
+    page_title="OpenAI Streamlit Gallery",
     page_icon=":rocket:",
     layout="wide",
 )
@@ -36,8 +39,8 @@ st.title("#")  # This anchor is needed for the page to start at the top when it 
 with st.container():
     col1, col2 = st.columns((2, 1))
     with col1:
-        st.title("Welcome the OpenAI Streamlit App")
-        st.subheader("Hi, I'm Matt 💻")
+        st.title("Welcome the OpenAI Streamlit Gallery")
+        st.subheader("Deployed via Github & Google Cloud 💻")
         st.subheader(
             """
             Using pure Python for leveraging OpenAI's product offerings including *Speech Recognition*, *AI Image Generation*, *Autocomplete*, *chatGPT*, *etc*.
@@ -61,11 +64,6 @@ with st.container():
     st.write("---")
     col1, col2 = st.columns(2)
     with col1:
-        st_lottie(
-            load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_dh764zdr.json"),
-            height=500,
-        )
-    with col2:
         st.header("Create AI Artwork")
         
         st.text_input("Enter an Image to Create","two dogs playing chess, oil painting",key="placeholder")
@@ -75,6 +73,9 @@ with st.container():
             Done via DALLE 🍕
             """
         )
+    with col2:
+        image_resp = openai.Image.create(prompt="two dogs playing chess, oil painting", n=4, size="512x512")
+        st.image(image_resp["Data"][0]["url"])
         
 # --- Docs ---
 with st.container():
