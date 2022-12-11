@@ -67,11 +67,8 @@ with st.container():
         
     with col2:
         image_resp = openai.Image.create(prompt=ai_image_idea, n=4, size='256x256')
-        col1, col2 = st.columns(2)
-        with col1:
-            st.image(image_resp["data"][0]["url"])
-        with col2:
-            st.image(image_resp["data"][1]["url"])
+        st.image(image_resp["data"][0]["url"])
+        st.image(image_resp["data"][1]["url"])
         
 # --- Docs ---
 with st.container():
