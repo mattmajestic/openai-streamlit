@@ -54,7 +54,7 @@ with st.container():
             """
         )
     with col2:
-        st.image("https://res.cloudinary.com/dyd911kmh/image/upload/v1640050215/image27_frqkzv.png")
+        st.image("https://streamlit.io/images/brand/streamlit-logo-secondary-lightmark-lighttext.png")
 
 
 with st.container():
