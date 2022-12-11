@@ -41,18 +41,12 @@ with st.container():
     col1, col2 = st.columns(2)
     with col1:
         st.title("Welcome the OpenAI Streamlit Gallery")
-        st.subheader("Deployed via Github & Google Cloud 💻")
         st.subheader(
             """
-            Using pure Python for leveraging OpenAI's product offerings including *Speech Recognition*, *AI Image Generation*, *Autocomplete*, *chatGPT*, *etc*.
+            Using pure Python :snake: for leveraging OpenAI's product offerings including *Speech Recognition*, *AI Image Generation*, *Autocomplete*, *chatGPT*, *etc* with Streamlit.
             """
         )
         st.write("""""")
-        st.subheader(
-            """
-            This page is made with pure Python :snake: with Streamlit library.
-            """
-        )
     with col2:
         st.image("https://streamlit.io/images/brand/streamlit-logo-secondary-lightmark-lighttext.png")
 
@@ -63,7 +57,7 @@ with st.container():
     with col1:
         st.header("Create AI Artwork")
         ai_image_idea = st.text_input("Enter an Image to Create","two orange cats playing chess, oil painting",key="placeholder")
-        st.button("Generate Art",key="generate")
+        st.button("Generate Art 🏃",key="generate")
         
     with col2:
         image_resp = openai.Image.create(prompt=ai_image_idea, n=4, size='256x256')
@@ -85,3 +79,5 @@ with st.container():
         st.image("https://avatars.githubusercontent.com/u/14957082?s=200&v=4")
         st.subheader("OpenAI Python Docs")
         st.write("This is a pure Python web app leveraging the OpenAI package within Streamlit.")
+        
+st.subheader("Deployed via Github & Google Cloud 💻")
