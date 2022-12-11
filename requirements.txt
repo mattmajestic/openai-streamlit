@@ -1,0 +1,5 @@
+bokeh
+requests
+streamlit
+streamlit-lottie
+openai
