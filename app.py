@@ -37,7 +37,7 @@ st.title("#")  # This anchor is needed for the page to start at the top when it 
 
 # --- INTRO ---
 with st.container():
-    col1, col2 = st.columns((2, 1))
+    col1 = st.columns(1)
     with col1:
         st.title("Welcome the OpenAI Streamlit Gallery")
         st.subheader("Deployed via Github & Google Cloud 💻")
@@ -52,12 +52,6 @@ with st.container():
             This page is made with pure Python :snake: with Streamlit library.
             """
         )
-    with col2:
-        st_lottie(
-            load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_bniew9j6.json"),
-            height=500,
-        )
-
 
 # --- ABOUT ---
 with st.container():
@@ -65,17 +59,11 @@ with st.container():
     col1, col2 = st.columns(2)
     with col1:
         st.header("Create AI Artwork")
-        
         ai_image_idea = st.text_input("Enter an Image to Create","two orange cats playing chess, oil painting",key="placeholder")
+        st.button("Generate Art",key="generate")
         
-        st.write(
-            """
-            Done via DALLE 🍕
-            """
-        )
     with col2:
         image_resp = openai.Image.create(prompt=ai_image_idea, n=4, size="512x512")
-        st.button("Generate Art",key="generate")
         st.image(image_resp["data"][0]["url"])
         
 # --- Docs ---
