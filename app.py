@@ -83,7 +83,7 @@ with st.container():
     st.header("Docs")
     st.write("##")
 
-    col1, col2 = st.columns(6)
+    col1, col2 = st.columns(2)
     with col1:
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
         st.subheader("Demo Video")
