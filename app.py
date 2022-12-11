@@ -86,28 +86,10 @@ with st.container():
 
     col1, col2 = st.columns(2)
     with col1:
-        st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
+        st.image("https://youtu.be/0-caqm9hu38")
         st.subheader("Demo Video")
-        st.write("Check out OpenAI as a company. We go over their funding, products & general thoughts on the comapny.")
+        st.write("Check out OpenAI as a company. We go over their funding, products & general thoughts on the company.")
     with col2:
-        st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
+        st.image("https://avatars.githubusercontent.com/u/14957082?s=200&v=4")
         st.subheader("OpenAI Python Docs")
         st.write("This is a pure Python web app leveraging the OpenAI package within Streamlit.")
-
-with st.container():
-    st.write("---")
-    st.markdown("<h2 style='text-align: center;'>Contact</h2>", unsafe_allow_html=True)
-    st.write("##")
-
-    col1, col2, col3 = st.columns(3)
-    with col2:
-        contact_form = """
-        <form action="https://formsubmit.co/805cc992f02da35ae356f2451ece18be" method="POST">
-            <input type="hidden" name="_captcha" value="true">
-            <input type="text" name="name" placeholder="Your name" required>
-            <input type="email" name="email" placeholder="Your email" required>
-            <textarea name="message" placeholder="Your message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-        """
-        st.markdown(contact_form, unsafe_allow_html=True)
