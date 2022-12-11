@@ -66,7 +66,7 @@ with st.container():
     with col1:
         st.header("Create AI Artwork")
         
-        ai_image_idea = st.text_input("Enter an Image to Create","two dogs playing chess, oil painting",key="placeholder")
+        ai_image_idea = st.text_input("Enter an Image to Create","two orange cats playing chess, oil painting",key="placeholder")
         
         st.write(
             """
