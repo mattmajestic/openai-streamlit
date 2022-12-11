@@ -66,7 +66,7 @@ with st.container():
     with col1:
         st.header("Create AI Artwork")
         
-        st.text_input("Enter an Image to Create","two dogs playing chess, oil painting",key="placeholder")
+        ai_image_idea = st.text_input("Enter an Image to Create","two dogs playing chess, oil painting",key="placeholder")
         
         st.write(
             """
@@ -74,7 +74,8 @@ with st.container():
             """
         )
     with col2:
-        image_resp = openai.Image.create(prompt="two dogs playing chess, oil painting", n=4, size="512x512")
+        image_resp = openai.Image.create(prompt=ai_image_idea, n=4, size="512x512")
+        st.button("Generate Art",key="generate")
         st.image(image_resp["data"][0]["url"])
         
 # --- Docs ---
