@@ -56,9 +56,10 @@ with st.container():
         st.button("Generate Art 🏃",key="generate")
         
     with col2:
-        image_resp = openai.Image.create(prompt=ai_image_idea, n=4, size='256x256')
-        st.image(image_resp["data"][0]["url"])
-        st.image(image_resp["data"][1]["url"])
+        with st.spinner('Generating your Art'):
+            image_resp = openai.Image.create(prompt=ai_image_idea, n=4, size='256x256')
+            st.image(image_resp["data"][0]["url"])
+            st.image(image_resp["data"][1]["url"])
         
 # --- Docs ---
 with st.container():
