@@ -15,8 +15,6 @@ st.set_page_config(
     layout="wide",
 )
 
-st.balloons()
-
 def load_lottieurl(url):
     r = requests.get(url)
     if r.status_code != 200:
