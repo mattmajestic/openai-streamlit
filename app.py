@@ -8,7 +8,6 @@ import os
 
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
-
 st.set_page_config(
     page_title="OpenAI Streamlit Gallery",
     page_icon=":rocket:",
@@ -20,7 +19,6 @@ def load_lottieurl(url):
     if r.status_code != 200:
         return None
     return r.json()
-
 
 def local_css(file_name):
     with open(file_name) as f:
