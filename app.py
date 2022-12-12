@@ -75,5 +75,6 @@ with st.container():
         st.image("https://avatars.githubusercontent.com/u/14957082?s=200&v=4")
         st.subheader("OpenAI Python Docs")
         st.write("This is a pure Python web app leveraging the OpenAI package within Streamlit.")
-        
+
+st.write("---")
 st.subheader("Deployed via Github & Google Cloud 💻")
