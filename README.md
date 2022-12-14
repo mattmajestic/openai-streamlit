@@ -1,5 +1,4 @@
-# openai-streamlit
-Open AI App built in Streamlit
+#  Open AI App built in Streamlit 🎈
 
 Using pure Python 🐍 for leveraging OpenAI's product offerings including:
 - Speech Recognition 
