@@ -29,6 +29,10 @@ def local_css(file_name):
 #  To get rid of the Streamlit branding stuff
 local_css("css/styles.css")
 
+
+#  Anchor
+st.title("#")  # This anchor is needed for the page to start at the top when it is called.
+
 # --- INTRO ---
 
 with st.container():
