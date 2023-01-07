@@ -73,7 +73,7 @@ with st.container():
 
     col1, col2 = st.columns(2)
     with col1:
-        st.image("https://avatars.githubusercontent.com/u/14957082?s=200&v=4")
+        components.iframe("https://www.youtube.com/embed/yPSMC3FTYtA")
         st.subheader("Demo Video")
         st.write("Check out OpenAI as a company. We go over their funding, products & general thoughts on the company.")
     with col2:
