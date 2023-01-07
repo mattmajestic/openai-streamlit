@@ -50,7 +50,7 @@ with st.container():
     col1, col2 = st.columns(2)
     with col1:
         st.header("Create AI Artwork")
-        st.caption("Mote: Currently static image as I have it OpenAI API query limit")
+        st.caption("Note: Currently static image as I have it OpenAI API query limit")
         ai_image_idea = st.text_input("Enter an Image to Create","two dogs playing chess, oil painting",key="placeholder")
         st.button("Generate Art 🏃",key="generate")
         
