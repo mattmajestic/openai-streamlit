@@ -74,7 +74,7 @@ with st.container():
         message("OpenAI Reponse from Whisper", is_user=True) 
         
     with col2:
-       st.title("Welcome the OpenAI Streamlit Gallery")
+       st.title("OpenAI Whisper Chat in Streamlit")
         st.subheader(
             """
             Using pure Python :snake: for leveraging OpenAI's product offerings including *Speech Recognition*, *AI Image Generation*, *Autocomplete*, *chatGPT*, *etc* with Streamlit.
