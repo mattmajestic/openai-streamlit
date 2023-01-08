@@ -72,7 +72,7 @@ with st.container():
     st.write("##")
     col1, col2 = st.columns(2)
     with col1:
-        chat_msg = st.text_input("You:"," ",key="placeholder")
+        chat_msg = st.text_input("You:"," ",key="chat_msg")
         message(chat_msg, is_user=True) 
         chat_msg_res = "You asked me the following: " + chat_msg
         message(chat_msg_res) 
