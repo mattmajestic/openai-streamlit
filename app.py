@@ -7,6 +7,7 @@ import os
 import numpy as np
 from io import BytesIO
 import streamlit.components.v1 as components
+from streamlit_chat import message
 
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
@@ -64,7 +65,22 @@ with st.container():
             #image_resp = openai.Image.create(prompt=ai_image_idea, n=4, size='256x256')
             #st.image(image_resp["data"][0]["url"])
             #st.image(image_resp["data"][1]["url"])
+         
+with st.container():
+    st.write("---")
+    col1, col2 = st.columns(2)
+    with col1:
+        message("My message") 
+        message("OpenAI Reponse from Whisper", is_user=True) 
         
+    with col2:
+       st.title("Welcome the OpenAI Streamlit Gallery")
+        st.subheader(
+            """
+            Using pure Python :snake: for leveraging OpenAI's product offerings including *Speech Recognition*, *AI Image Generation*, *Autocomplete*, *chatGPT*, *etc* with Streamlit.
+            """
+        )
+     
 # --- Docs ---
 with st.container():
     st.write("---")
@@ -82,4 +98,4 @@ with st.container():
         st.write("This is a pure Python web app leveraging the OpenAI package within Streamlit.")
 
 st.write("---")
-st.subheader("Deployed via Github & Google Cloud 💻")
+st.subheader("Deployed via Github :octocat: & Google Cloud via Docker 🐋")
