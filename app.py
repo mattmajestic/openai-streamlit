@@ -74,8 +74,7 @@ with st.container():
     with col1:
         chat_msg = st.text_input("You:"," ",key="chat_msg")
         message(chat_msg, is_user=True) 
-        chat_msg_res = "You asked me the following: " + chat_msg
-        message(chat_msg_res) 
+        message("OpenAI Whisper Response") 
         
     with col2:
         st.header("OpenAI Whisper Chat in Streamlit")
