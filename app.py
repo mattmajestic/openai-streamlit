@@ -74,8 +74,8 @@ with st.container():
         message("OpenAI Reponse from Whisper", is_user=True) 
         
     with col2:
-       st.header("OpenAI Whisper Chat in Streamlit")
-       st.subheader("Emulating chatGPT")
+        st.header("OpenAI Whisper Chat in Streamlit")
+        st.subheader("Emulating chatGPT")
      
 # --- Docs ---
 with st.container():
