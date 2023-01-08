@@ -70,6 +70,7 @@ with st.container():
     st.write("---")
     col1, col2 = st.columns(2)
     with col1:
+        chat_msg = st.text_input("You:"," ",key="placeholder")
         message("My message") 
         message("OpenAI Reponse from Whisper", is_user=True) 
         
@@ -94,4 +95,4 @@ with st.container():
         st.write("This is a pure Python web app leveraging the OpenAI package within Streamlit.")
 
 st.write("---")
-st.subheader("Deployed via Github :octocat: & Google Cloud via Docker 🐋")
+st.subheader("Deployed via Github & Google Cloud via Docker 🐋")
