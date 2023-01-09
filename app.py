@@ -85,31 +85,34 @@ with st.container():
 # --- Docs ---
 with st.container():
     st.write("---")
-    st.header("Docs")
+    st.header("Documentation via Youtube")
     st.write("##")
 
     col1, col2 = st.columns(2)
     with col1:
-        components.iframe("https://www.youtube.com/embed/yPSMC3FTYtA")
         st.subheader("OpenAI Streamlit App in 1 minute")
+        components.iframe("https://www.youtube.com/embed/yPSMC3FTYtA")
         st.write("Copy my code to make your own OpenAI Streamlit app.")
+        
     with col2:
-        components.iframe("https://www.youtube.com/embed/0-caqm9hu38")
         st.subheader("OpenAI Python Overview")
+        components.iframe("https://www.youtube.com/embed/0-caqm9hu38")
         st.write("Check out OpenAI as a company. We go over their funding, products & general thoughts on the company.")
 
 # --- Mobile ---
 with st.container():
     st.write("---")
-    st.header("Mobile")
+    st.header("Scan for Mobile")
+    st.caption("Question: Does Streamlit have a way to check the device type like in `shinybrowser` in `R`"
     st.write("##")
 
     col1, col2 = st.columns(2)
     with col1:
-        st.header("Infrx")
-        st.subheader("Deployed via Github & Google Cloud via Docker 🐋")
-    with col2:
         data = 'https://openai-streamlit.app'
         img = qrcode.make(data)
         img.save("app_qr.png")
         st.image("app_qr.png")
+    with col2:
+        st.header("Infrastructure Notes")
+        st.subheader("Deployed via Github & Google Cloud Run via a Dockerfile 🐋")
+        st.write("https://github.com/mattmajestic/openai-streamlit")
