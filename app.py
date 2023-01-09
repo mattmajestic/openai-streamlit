@@ -43,7 +43,7 @@ with st.container():
         st.title("Welcome the OpenAI Streamlit Gallery")
         st.subheader(
             """
-            Using pure Python :snake: for leveraging OpenAI's product offerings including *Speech Recognition*, *AI Image Generation*, *Autocomplete*, *chatGPT*, *etc* with Streamlit.
+            Using pure Python :snake: for leveraging OpenAI's product offerings including *Speech Recognition*, *AI Image Generation*, *chatGPT* examples within Streamlit.
             """
         )
         st.write("""""")
@@ -56,7 +56,7 @@ with st.container():
     col1, col2 = st.columns(2)
     with col1:
         st.header("Create AI Artwork")
-        st.caption("Note: Currently static image as I have it OpenAI API query limit")
+        st.caption("Note: Currently static image as OpenAI API query limit has been reached")
         ai_image_idea = st.text_input("Enter an Image to Create","two dogs playing chess, oil painting",key="placeholder")
         st.button("Generate Art 🏃",key="generate")
         
@@ -69,7 +69,7 @@ with st.container():
          
 with st.container():
     st.write("---")
-    st.header("chatGPT via Steamlit")
+    st.header("chatGPT in Streamlit")
     st.write("##")
     col1, col2 = st.columns(2)
     with col1:
@@ -80,7 +80,7 @@ with st.container():
         
     with col2:
         st.header("OpenAI Whisper Chat in Streamlit")
-        st.subheader("Emulating chatGPT")
+        st.subheader("Emulating chatGPT but with Audio Input")
      
 # --- Docs ---
 with st.container():
@@ -114,5 +114,6 @@ with st.container():
         st.image("app_qr.png")
     with col2:
         st.header("Infrastructure Notes")
-        st.subheader("Deployed via Github & Google Cloud Run via a Dockerfile 🐋")
+        st.subheader("Code Hosted on Github & deployed on Google Cloud Run with Docker 🐋")
+        st.write("Contribute to the Repo below")
         st.write("https://github.com/mattmajestic/openai-streamlit")
