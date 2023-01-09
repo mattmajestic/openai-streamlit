@@ -5,3 +5,4 @@ streamlit-lottie
 streamlit-webrtc
 openai
 streamlit-chat 
+qrcode

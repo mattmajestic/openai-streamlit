@@ -8,6 +8,7 @@ import numpy as np
 from io import BytesIO
 import streamlit.components.v1 as components
 from streamlit_chat import message
+import qrcode
 
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
@@ -97,5 +98,17 @@ with st.container():
         st.subheader("OpenAI Python Docs")
         st.write("This is a pure Python web app leveraging the OpenAI package within Streamlit.")
 
-st.write("---")
-st.subheader("Deployed via Github & Google Cloud via Docker 🐋")
+# --- Mobile ---
+with st.container():
+    st.write("---")
+    st.header("Mobile")
+    st.write("##")
+
+    col1, col2 = st.columns(2)
+    with col1:
+        st.header("Infrx")
+        st.subheader("Deployed via Github & Google Cloud via Docker 🐋")
+    with col2:
+        data = 'https://openai-streamlit.app'
+        img = qrcode.make(data)
+        st.image(img)
