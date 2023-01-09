@@ -103,7 +103,7 @@ with st.container():
 with st.container():
     st.write("---")
     st.header("Scan for Mobile")
-    st.caption("Question: Does Streamlit have a way to check the device type like in `shinybrowser` in `R`"
+    st.caption("Question: Does Streamlit have a way to check the device type like in `shinybrowser` in `R`")
     st.write("##")
 
     col1, col2 = st.columns(2)
