@@ -91,12 +91,12 @@ with st.container():
     col1, col2 = st.columns(2)
     with col1:
         components.iframe("https://www.youtube.com/embed/yPSMC3FTYtA")
-        st.subheader("Demo Video")
-        st.write("Check out OpenAI as a company. We go over their funding, products & general thoughts on the company.")
+        st.subheader("OpenAI Streamlit App in 1 minute")
+        st.write("Copy my code to make your own OpenAI Streamlit app.")
     with col2:
-        st.image("https://avatars.githubusercontent.com/u/14957082?s=200&v=4")
-        st.subheader("OpenAI Python Docs")
-        st.write("This is a pure Python web app leveraging the OpenAI package within Streamlit.")
+        components.iframe("https://www.youtube.com/embed/0-caqm9hu38")
+        st.subheader("OpenAI Python Overview")
+        st.write("Check out OpenAI as a company. We go over their funding, products & general thoughts on the company.")
 
 # --- Mobile ---
 with st.container():
