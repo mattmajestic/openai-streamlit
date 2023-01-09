@@ -111,4 +111,5 @@ with st.container():
     with col2:
         data = 'https://openai-streamlit.app'
         img = qrcode.make(data)
-        st.image(img)
+        img.save("app_qr.png")
+        st.image("app_qr.png")
